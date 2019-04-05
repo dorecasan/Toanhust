@@ -1,0 +1,325 @@
+- id: '1551229508121'
+  alias: Wake up on time
+  trigger:
+  - at: 05:00:00
+    platform: time
+  condition: []
+  action:
+  - service: switch.turn_on
+    entity_id: switch.desk_lamp
+    
+    
+    
+    
+- id: '1551329869650'
+  alias: Hass Theme
+  initial_state: 'on'
+  trigger:
+  - entity_id: input_select.hass_theme
+    platform: state
+  condition: []
+  action:
+  - service: frontend.set_theme
+    data_template:
+      name: '{{ states.input_select.hass_theme.state }}'
+      
+      
+      
+- id: '1551349623142'
+  alias: Open Web
+  trigger:
+  - entity_id: input_select.open_web
+    platform: state
+  condition: []
+  action:
+  - service: browser.browse_url
+    data_template:
+      name: '{{states.input_select.open_web.state}}'
+      
+      
+- alias: Set Music Volume
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_number.volume_music
+  action:
+  - service: media_player.volume_set
+    data_template:
+      entity_id: >
+        {% if is_state("input_select.media_player", "Alexa") %} media_player.toan_s_echo_dot
+        {% elif is_state("input_select.media_player", "Chromecast") %} media_player.this_device
+        {% endif %}
+      volume_level: '{{  states.input_number.volume_music.state  }}'
+
+  
+  
+- alias: Play select music
+  initial_state: true
+  trigger:
+  - platform: state
+    entity_id: input_select.music
+  action:
+  - service: media_player.play_media
+    data_template:
+      entity_id: >
+        {% if is_state("input_select.media_player", "Alexa") %} media_player.toan_s_echo_dot
+        {% elif is_state("input_select.media_player", "Google Assistant") %} media_player.this_device 
+        {% endif %}
+      media_content_id: >
+        {% if is_state("input_select.music", "Nhạc Vpop") %} https://toanhust.duckdns.org:8123/local/music/Vpop.mp3
+        {% elif is_state("input_select.music", "Nhạc Pop") %} https://toanhust.duckdns.org:8123/local/music/Pop.mp3
+        {% elif is_state("input_select.music", "Nhạc Studying") %} https://toanhust.duckdns.org:8123/local/music/Studying.mp3
+        {% elif is_state("input_select.music", "Nhạc Sleeping") %} https://toanhust.duckdns.org:8123/local/music/Studying.mp3
+        {% elif is_state("input_select.music", "Nhạc EDM") %} https://toanhust.duckdns.org:8123/local/music/EDM.mp3
+        {% endif %}
+      media_content_type: audio/mp4
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.play_music 
+ 
+  
+  
+  
+- alias: Stop music
+  initial_state: true
+  trigger:
+  - platform: state
+    entity_id: input_boolean.play_music
+    to: 'off'
+  action:
+  - service: media_player.turn_off
+    data_template:
+      entity_id: >
+        {% if is_state("input_select.media_player", "Alexa") %} media_player.toan_s_echo_dot
+        {% elif is_state("input_select.media_player", "Google Assistant") %} media_player.this_device
+        {% endif %}
+  - service: input_number.set_value
+    data_template:
+      entity_id: input_number.volume_music
+
+  
+  
+  
+- alias: play zing_mp3 by select music_type
+  trigger:
+    platform: state
+    entity_id: input_select.zing_mp3
+  condition:
+    condition: state
+    entity_id: input_boolean.zing_mp3
+    state: 'on'
+  action:
+    service: script.turn_on
+    entity_id: script.play_zing_mp3
+  id: fb1967fcc6af4ff1bbc7f0551384ad2f
+- alias: play zing_mp3 by turn on
+  trigger:
+    platform: state
+    entity_id: input_boolean.zing_mp3
+    to: 'on'
+  action:
+    service: script.turn_on
+    entity_id: script.play_zing_mp3  
+  
+  
+  
+- alias: play zing_mp3 by trigger repeat or shuffle
+  trigger:
+    platform: state
+    entity_id:
+    - input_boolean.zing_repeat
+    - input_boolean.zing_shuffle
+  condition:
+    condition: state
+    entity_id: input_boolean.zing_mp3
+    state: 'on'
+  action:
+    service: script.turn_on
+    entity_id: script.play_zing_mp3
+ 
+  
+  
+  
+- id: '1553781963225'
+  alias: Automation when at home
+  trigger:
+  - entity_id: device_tracker.toan
+    from: not_home
+    platform: state
+    to: home
+  condition: []
+  action:
+  #- service: script.turn_on
+  #  entity_id: script.boss_home
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.boss_state
+      option: Home
+      
+- alias: Automation when not home
+  trigger:
+  - entity_id: device_tracker.toan
+    from: home
+    platform: state
+    to: not_home
+  condition: []
+  action:
+  #- service: script.turn_on
+  #  entity_id: script.boss_not_home
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.boss_state
+      option: Not Home
+      
+- alias: Automation when not home input
+  trigger:
+  - entity_id: input_select.boss_state
+    from: Home
+    platform: state
+    to: Not Home
+  condition: []
+  action:
+  - service: script.turn_on
+    entity_id: script.boss_not_home
+    
+- alias: Automation when home input
+  trigger:
+  - entity_id: input_select.boss_state
+    from: Not Home
+    platform: state
+    to: Home
+  condition: []
+  action:
+  - service: script.turn_on
+    entity_id: script.boss_home
+    
+    
+  
+- alias: Weekdays Alarm Clock
+  trigger:
+  - platform: time_pattern
+    minutes: /1
+    seconds: 1
+  condition:
+  - condition: state
+    entity_id: input_boolean.alarm_weekday_enabled
+    state: 'on'
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  - condition: template
+    value_template: '{{ states.sensor.time.state == states.sensor.alarm_weekday_time.state}}'
+  action:
+  - service: switch.turn_on
+    entity_id: switch.desk_lamp
+  - service: switch.turn_on
+    entity_id: switch.sonoff_100074e346
+  - service: switch.turn_on
+    entity_id: switch.laptop
+ 
+  
+  
+- alias: Weekend Alarm Clock
+  trigger:
+  - platform: time_pattern
+    minutes: /1
+    seconds: 1
+  condition:
+  - condition: state
+    entity_id: input_boolean.alarm_weekend_enabled
+    state: 'on'
+  - condition: time
+    weekday:
+      - sat
+      - sun
+  - condition: template
+    value_template: '{{ states.sensor.time.state == states.sensor.alarm_weekend_time.state}}'
+  action:
+  - service: switch.turn_on
+    entity_id: switch.desk_lamp
+  - service: switch.turn_on
+    entity_id: switch.sonoff_100074e346
+
+    
+- alias: Everthing Managment On 
+  trigger:
+  - platform: time_pattern
+    minutes: /1
+    seconds: 1
+  condition:
+  - condition: state
+    entity_id: input_boolean.time_managment
+    state: 'on'
+  - condition: state
+    entity_id: input_boolean.on_time
+    state: 'on'
+  - condition: state
+    entity_id: input_boolean.off_time
+    state: 'off'
+  - condition: template
+    value_template: '{{ states.sensor.time.state == states.sensor.time_managment.state }}'
+  action:
+  - service: switch.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state("input_select.time_managment", "Desk Lamp") %} switch.desk_lamp
+        {% elif is_state("input_select.time_managment", "Fan") %} switch.fan
+        {% elif is_state("input_select.time_managment_2", "Fan Remote") %} switch.fan_remote
+        {% elif is_state("input_select.time_managment", "Main Light") %} switch.sonoff_10007445d1
+        {% elif is_state("input_select.time_managment", "Home Light") %} switch.sonoff_100074e346
+        {% endif %}
+  - service: switch.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state("input_select.time_managment_2", "Desk Lamp") %} switch.desk_lamp
+        {% elif is_state("input_select.time_managment_2", "Fan") %} switch.fan
+        {% elif is_state("input_select.time_managment_2", "Fan Remote") %} switch.fan_remote
+        {% elif is_state("input_select.time_managment_2", "Main Light") %} switch.sonoff_10007445d1
+        {% elif is_state("input_select.time_managment_2", "Home Light") %} switch.sonoff_100074e346
+        {% elif is_state("input_select.time_managment_2", "Nothing") %}
+        {% endif %}
+        
+- alias: Everthing Managment Off
+  trigger:
+  - platform: time_pattern
+    minutes: /1
+    seconds: 1
+  condition:
+  - condition: state
+    entity_id: input_boolean.time_managment
+    state: 'on'
+  - condition: state
+    entity_id: input_boolean.on_time
+    state: 'off'
+  - condition: state
+    entity_id: input_boolean.off_time
+    state: 'on'
+  - condition: template
+    value_template: '{{ states.sensor.time.state == states.sensor.time_managment.state }}'
+  action:
+  - service: switch.turn_off
+    data_template:
+      entity_id: >
+        {% if is_state("input_select.time_managment", "Desk Lamp") %} switch.desk_lamp
+        {% elif is_state("input_select.time_managment", "Fan") %} switch.fan
+        {% elif is_state("input_select.time_managment_2", "Fan Remote") %} switch.fan_remote
+        {% elif is_state("input_select.time_managment", "Main Light") %} switch.sonoff_10007445d1
+        {% elif is_state("input_select.time_managment", "Home Light") %} switch.sonoff_100074e346
+        {% endif %}
+  - service: switch.turn_off
+    data_template:
+      entity_id: >
+        {% if is_state("input_select.time_managment_2", "Desk Lamp") %} switch.desk_lamp
+        {% elif is_state("input_select.time_managment_2", "Fan") %} switch.fan
+        {% elif is_state("input_select.time_managment_2", "Fan Remote") %} switch.fan_remote
+        {% elif is_state("input_select.time_managment_2", "Main Light") %} switch.sonoff_10007445d1
+        {% elif is_state("input_select.time_managment_2", "Home Light") %} switch.sonoff_100074e346
+        {% elif is_state("input_select.time_managment_2", "Nothing") %}
+        {% endif %}
+  
+
+  
+

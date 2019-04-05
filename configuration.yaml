@@ -1,0 +1,254 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 21.028511
+  longitude: 105.804817
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 0
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Asia/Ho_Chi_Minh
+  # Customization file
+  customize: !include customize.yaml
+  whitelist_external_dirs:
+  - '/tmp'
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Show the introduction message on startup.
+introduction:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+http:
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+  api_password: toanielts8.0
+  base_url: toanhust.duckdns.org
+  
+api:
+
+
+# Text to speech
+tts:
+  - platform: google
+    cache: true
+    cache_dir: /tmp/tts
+    time_memory: 300
+    language: 'vi'
+  
+
+  
+google_assistant:
+  project_id: assistant-78212
+  api_key: AIzaSyB5ZR2tGxLqf0oaz4zKP-Puht2tz3R4a-c
+  exposed_domains:
+    - switch
+    - light
+    - group
+
+
+
+  
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+input_select: !include input_select.yaml
+cloud: !include cloud.yaml
+sensor: !include sensor.yaml
+browser:
+
+weblink:
+  entities:
+    - name: Tin tức bóng đá
+      url: https://bongda24h.vn
+    - name: Đọc báo
+      url: https://vnexpress.net
+    - name: Facebook
+      url: https://www.facebook.com
+    - name: Youtube
+      url: https://www.youtube.com
+
+switch:
+  - platform: broadlink
+    host: 192.168.16.105
+    mac: 90:97:f3:de:77:8e
+    type: spmini2
+    friendly_name: ' Virtual Desk Lamp'
+    scan_interval: 3
+  - platform: broadlink
+    host: 192.168.16.109
+    mac: 78:0f:77:59:43:14
+    type: mp1
+    friendly_name: 'MP1'
+    slots:
+      slot_1: 'Laptop Power'
+      slot_2: 'Desk Lamp'
+      slot_3: 'Alexa plug'
+      slot_4: 'Fan'
+  - platform: broadlink
+    host: 192.168.16.114
+    mac: 78:0f:77:d9:2b:c5
+    type: rm_mini
+    friendly_name: RM Mini 3
+    switches:
+      fan_remote:
+        friendly_name: Fan Remote
+        command_on: 'JgBYAAABKpUTFBMTExMTFBIUExMTExM3FDYUNhM3EzcTNxQ2EzcTFBI4ExMUEhMTExQTExMTExQSFBM3EzcTNxM3EzcTNxM3EwAFGwABKkoTAAxsAAEqShMADQU='          
+        command_off: 'JgBYAAABKpUTFBMTExMTFBIUExMTExM3FDYUNhM3EzcTNxQ2EzcTFBI4ExMUEhMTExQTExMTExQSFBM3EzcTNxM3EzcTNxM3EwAFGwABKkoTAAxsAAEqShMADQU='    
+  - platform: mqtt
+    name: "MQTT Light"
+    command_topic: "cmnd/sonoff/power"
+    state_topic: "stat/sonoff/POWER"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"    
+  
+    
+  - platform: wake_on_lan
+    name: Laptop
+    mac_address: 'e0:db:55:9e:5f:8f'
+    host: 192.168.16.50
+    broadcast_address: '192.168.16.255'
+    turn_off:
+      service: hassio.addon_stdin
+      data:
+        addon: core_rpc_shutdown
+        input: Laptop
+       
+       
+  
+ifttt:
+  key: bHXrLtnekV0oqz62u3vXPd  
+
+
+
+frontend:
+  themes: !include_dir_merge_named themes/  
+ 
+alexa_media: 
+  accounts:
+    - email: "dorecasan@gmail.com"
+      password: "toanielts8.0"
+      url: amazon.com
+      
+panel_iframe:
+  nodered:
+    title: Node-RED
+    icon: mdi:sitemap
+    url: https://192.168.16.100:1880   
+  configurator:
+    title: Configurator
+    icon: mdi:wrench
+    url: https://toanhust.duckdns.org:3218   
+      
+lovelace:
+  mode: yaml
+  
+weather: 
+  - platform: darksky
+    api_key: 12f9b9b4c230c853c2e3ab7c4e7df20e  
+    longitude: 105.879860
+    latitude: 20.998270
+    name: Toan Sky
+    
+    
+media_extractor:
+zing_mp3:
+
+input_boolean:
+  play_music:
+    name: Play Music
+    initial: 'off'
+    icon: mdi:play
+  alarm_weekday_enabled:
+    name: WeekDays 
+    initial: off
+    icon: mdi:calendar
+  alarm_weekend_enabled:
+    name: Weekend    
+    initial: off
+  zing_mp3:
+    name: Play Zing MP3
+    icon: mdi:music-box
+    initial: 'off'
+  
+  zing_repeat:  
+    name: Repeat
+    initial: 'off'
+    icon: mdi:repeat
+  
+  zing_shuffle:  
+    name: Shuffle
+    initial: 'off'
+    icon: mdi:shuffle-variant
+  time_managment:
+    name: Time Managment
+    initial: 'off'
+    icon: mdi:account-clock
+  on_time:
+    name: 'ON'
+    initial: 'off'
+    icon: mdi:fingerprint
+  off_time:
+    name: 'OFF'
+    initial: 'off'
+    icon: mdi:close-box-outline
+
+input_number:
+  volume_music:
+    name: Volume
+    min: 0
+    max: 1
+    step: 0.05
+    initial: 0.4
+    icon: mdi:volume-high
+  alarm_hour:
+    name: Hours
+    icon: mdi:timer
+    initial: 5
+    min: 0
+    max: 23
+    step: 1
+    mode: slider
+  alarm_minutes:
+    name: Minutes
+    icon: mdi:timer
+    initial: 30
+    min: 0
+    max: 59
+    step: 1
+    mode: slider
+  time_hour:
+    name: Hours
+    icon: mdi:progress-check
+    min: 0
+    max: 23
+    step: 1
+    mode: slider
+  time_minute:
+    name: Minutes
+    icon: mdi:lock-clock
+    min: 0
+    max: 59
+    step: 1
+    mode: slider
+    
+  
+input_text:
+  music:
+    name: Link  
+
+sonoff:
+  username: dorecasan@gmail.com 
+  password: toanielts8.0
+  scan_interval: 5
+  grace_period: 600
+  api_region: 'as'
+  
+device_tracker:
+  - platform: ping
+    hosts:
+      Toan: 192.168.16.105

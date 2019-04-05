@@ -1,0 +1,15 @@
+script.iamhome:
+  friendly_name: Working Mode
+script.iamleaving:
+  friendly_name: Leave
+switch.virtual_desk_lamp: {}
+switch.sonoff_10007445d1:
+  friendly_name: Main Light
+sensor.thoigian:
+  icon: mdi:timer
+sensor.ngay_thang:
+  icon: mdi:calendar-clock
+input_boolean.off_time:
+  friendly_name: 'OFF'
+input_boolean.on_time:
+  friendly_name: 'ON'

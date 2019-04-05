@@ -1,0 +1,324 @@
+title: Toan's Home
+background: center / cover no-repeat url("/local/real.png") fixed
+views:
+ - title: main
+   icon: mdi:home-outline
+   cards:
+     - type: custom:card-modder
+       style:
+         background-color: rgba(0,0,100,0.6)
+         background-size: 50% 50%
+         --paper-item-icon-color: red
+         color: rgb(255, 255, 255)
+       card:
+         type: glance
+         title: Myself
+         entities:
+           - entity: person.nguyen_nhu_toan
+             icon: mdi:heart
+           - entity: input_select.boss_state
+             icon: mdi:cellphone-android
+     - type: custom:card-modder
+       style:
+         background-color: rgba(0,0,100,0.6)
+         background-size: 50% 50%
+         --paper-item-icon-color: green
+         color: rgb(255, 255, 255)
+       card:
+         type: glance
+         title: Switches
+         column_width: calc(100% / 3)
+         entities:
+           - entity: switch.desk_lamp
+             name: Desk Lamp
+             icon: mdi:desk-lamp
+             tap_action:
+               action: toggle
+           - entity: switch.fan
+             name: Electric Fan
+             icon: mdi:fan
+             tap_action:
+               action: toggle
+           - entity: switch.laptop_power
+             name: Laptop Power
+             tap_action:
+               action: toggle
+             icon: mdi:power-plug
+           - entity: switch.alexa_plug
+             name: Alexa Plug
+             icon: mdi:music
+             tap_action:
+               action: toggle
+     - type: custom:card-modder
+       style:
+         background-color: rgba(0,0,100,0.6)
+         background-size: 50% 50%
+         --paper-item-icon-color: blue
+         color: rgb(255, 255, 255)
+       card:
+         type: glance
+         title: Lights
+         column_width: calc(100% / 2)
+         entities:
+           - entity: switch.sonoff_10007445d1
+             name: Main Light
+             icon: mdi:lightbulb-outline
+             tap_action:
+               action: toggle
+           - entity: switch.sonoff_100074e346
+             name: Home Light
+             icon: mdi:lightbulb-outline
+             tap_action:
+               action: toggle               
+     - type: custom:card-modder
+       style:
+         background-color: rgba(0,0,100,0.6)
+         background-size: 50% 50%
+         --paper-item-icon-color: orange
+         color: rgb(255, 255, 255)
+       card:
+         type: glance
+         title: Broadlink
+         entities:
+           - entity: switch.fan_remote
+             icon: mdi:fan
+             name: Fan Remote
+             tap_action:
+               action: toggle
+
+     - type: custom:card-modder
+       style:
+         background-color: rgba(0,0,100,0.6)
+         background-size: 50% 50%
+         --paper-item-icon-color: green
+         color: rgb(255, 255, 255)
+       card:
+         type: entities
+         title: Time
+         show_header_toggle: false
+         entities:
+           - entity: sensor.date
+             name: Date
+             icon: mdi:calendar-clock
+           - entity: sensor.ngay_thang
+             name: Ngày tháng
+             icon: mdi:calendar-text
+           - entity: sensor.time
+             name: Clock
+             icon: mdi:clock-outline
+           - entity: sensor.dht_sensor_temperature
+             name: Temperature
+             icon: mdi:temperature-celsius
+           - entity: sensor.dht_sensor_humidity 
+             name: Humidity
+             icon: mdi:filter-outline
+    
+     - type: picture-entity
+       entity: switch.laptop
+       tap_action: 
+         action: toggle
+       state_image:
+         "on": /local/laptopon.jpg
+         "off": /local/laptopoff.jpg
+     - type: picture-glance
+       entities:
+         - script.iamhome
+         - script.iamleaving
+         - switch.desk_lamp
+         - script.iamworking
+       state_image:
+         "on": /local/workingplaceon.jpg
+         "off": /local/workingplaceoff.jpg
+       entity: switch.desk_lamp
+       tap_action:
+         action: toggle
+
+ - title: Media
+   icon: mdi:speaker-wireless
+   cards:
+     - type: custom:swipe-card
+       cards:
+         - type: vertical-stack
+           cards:
+             - type: horizontal-stack
+               cards:
+                 - type: conditional
+                   conditions:
+                     - entity: media_player.toan_s_echo_dot
+                       state_not: "off"
+                     - entity: media_player.toan_s_echo_dot
+                       state_not: "unavailable"
+                   card:
+                     type: media-control
+                     entity: media_player.toan_s_echo_dot
+         - type: vertical-stack
+           cards: 
+             - type: horizontal-stack
+               cards:         
+                 - type: 'custom:group-card'
+                   card:
+                     type: entities
+                     title: Play Music
+                     show_header_toggle: false
+                   group: group.music
+                   
+         - type: vertical-stack
+           cards: 
+             - type: horizontal-stack
+               cards:        
+                 - type: entities
+                   title: Zing MP3
+                   show_header_toggle: false
+                   entities:
+                     - entity: input_boolean.zing_mp3
+                       name: Zing MP3
+                     - entity: input_boolean.zing_repeat
+                       name: Repeat
+                     - entity: input_boolean.zing_shuffle
+                       name: Shuffle
+                     - entity: input_select.zing_mp3
+                       name: Songs
+                     - entity: script.play_zing_mp3
+                       name: Turn on  
+       
+ - title: Weblink
+   icon: mdi:web
+   cards:
+     - type: custom:swipe-card
+       cards:
+         - type: custom:card-modder
+           style:
+             background-color: rgba(0,230,118,0.7)
+             background-size: 50% 50%
+             --paper-item-icon-color: red
+             color: rgb(255, 255, 255)
+           card:
+             type: entities
+             title: Weblink
+             show_header_toggle: false
+             entities:
+               - type: weblink
+                 name: Tin tức bóng đá
+                 icon: mdi:soccer
+                 url: https://bongda24h.vn
+    
+               - type: weblink
+                 name: Đọc báo
+                 icon: mdi:newspaper
+                 url: https://vnexpress.net
+         
+               - type: weblink
+                 name: Facebook
+                 icon: mdi:facebook-box
+                 url: https://facebook.com
+         
+               - type: weblink
+                 name: Youtube
+                 icon: mdi:youtube
+                 url: https://youtube.com
+         - type: custom:card-modder
+           style:
+             background-color: rgba(100,255,218,0.8)
+             background-size: 50% 50%
+             --paper-item-icon-color: yellow
+             color: rgb(255, 255, 255)
+           card:          
+             type: entities
+             title: Theme
+             show_header_toggle: false
+             entities:
+               - input_select.hass_theme
+           
+ - title: Weather Forecast
+   icon: mdi:weather-partlycloudy     
+   type: vertical-stack
+   cards:
+     - type: custom:card-modder
+       style:
+         background-image: url("/local/tt5.jpg")
+         background-repeat: no-repeat
+         background-color: rgba(0,0,0,0.3)
+         color: rgb(0, 0, 0)
+       card:
+         type: "custom:weather-card"
+         entity_weather:  weather.toan_sky
+         entity_sun: sun.sun
+     - type: iframe
+       url: https://embed.windy.com/embed2.html
+       aspect_ratio: 45%
+ - title: Alarm Clock
+   icon: mdi:clock-outline 
+   cards:
+     - type: custom:swipe-card
+       cards:
+         - type: custom:card-modder
+           style:
+             background-color: rgba(244,88,230,0.8)
+             background-size: 50% 50%
+             --paper-item-icon-color: red
+             color: rgb(255, 255, 255)
+           card:
+             type: entities
+             title: Discipline
+             show_header_toggle: false
+             entities:
+               - sensor.ngay_thang
+               - input_number.alarm_hour
+               - input_number.alarm_minutes
+               - input_boolean.alarm_weekday_enabled
+               - input_boolean.alarm_weekend_enabled
+         - type: custom:card-modder
+           style:
+             background-color: rgba(244,88,230,0.8)
+             background-size: 50% 50%
+             --paper-item-icon-color: red
+             color: rgb(255, 255, 255)
+           card:
+             type: entities
+             title: Time Managment
+             show_header_toggle: false
+             entities:
+               - sensor.ngay_thang
+               - input_number.time_hour
+               - input_number.time_minute
+               - input_boolean.time_managment
+               - input_boolean.on_time
+               - input_boolean.off_time
+               - input_select.time_managment
+               - input_select.time_managment_2
+ - title: DHTT11
+   icon: mdi:graphql 
+   cards:
+     - type: custom:card-modder
+       style:
+         background-color: rgba(0,186,255,1)
+         background-size: 50% 50%
+         --paper-item-icon-color: green
+         color: rgb(255, 255, 255)
+       card:
+         type: history-graph
+         title: 'Temperature and Humidity'
+         entities:
+           - entity: sensor.dht_sensor_humidity 
+             name: Humidity
+           - entity: sensor.dht_sensor_temperature
+             name: Temperature
+       
+       
+resources:
+  - url: /local/group-card.js?v=1
+    type: js
+  - url: /local/custom_ui/weather-card.js
+    type: js
+  - url: /local/card-tools.js
+    type: js
+  - url: /local/card-modder.js
+    type: js
+  - url: /local/popup-card.js
+    type: js
+  - url: /local/state-switch.js
+    type: js
+  - url: /local/fold-entity-row.js
+    type: js
+  - url: /local/custom-lovelace/swipe-card/swipe-card.js
+    type: module

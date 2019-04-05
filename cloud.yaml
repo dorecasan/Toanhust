@@ -1,0 +1,54 @@
+  alexa:
+   filter:
+     include_entities:
+       - script.iamhome
+       - script.iamleaving
+       - switch.desk_lamp
+       - switch.laptop
+       - switch.laptop_power
+       - switch.sonoff_10007445d1
+       - switch.sonoff_100074e346
+       - switch.fan
+       - script.iamworking
+       - script.play_zing_mp3
+       - script.play_music_link
+     exclude_entities:
+       - switch.3_plugs
+     
+     
+     
+     include_domains:
+       - switch
+       - script
+       
+    # exclude_domains: 
+     
+     
+   entity_config:
+     script.iamhome:
+       name: My Home
+       description: Turn on all available devices
+       display_categories: switch
+     script.iamworking:
+       name: Working Mode
+       description: Turn on Laptop and Desk Lamp
+       display_categories: switch
+     switch.sonoff_10007445d1:
+       name: Main Light
+       description: Turn on Main Light  
+       display_categories: switch  
+     switch.sonoff_100074e346:
+       name: Home Light
+       description: Turn on Home Light  
+       display_categories: switch        
+     script.iamleaving:
+       name: Leaving Mode
+       description: Turn off all devices
+       display_categories: switch
+     script.play_music_link:
+       name: Play Music via Home Assistant
+       description: Play music on link
+       display_categories: switch
+       
+       
+     

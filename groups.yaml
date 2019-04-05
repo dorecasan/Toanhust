@@ -1,0 +1,15 @@
+Music:
+  control: hidden
+  name: Music
+  entities:
+    - input_number.volume_music
+    - input_boolean.play_music
+    - input_select.media_player
+    - input_select.music
+    - script.play_music_link
+    - input_text.music
+ngay_gio:
+  name: Ngày Giờ
+  entities:
+    - sensor.thoigian
+    - sensor.ngay_thang

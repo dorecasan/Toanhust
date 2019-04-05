@@ -1,0 +1,110 @@
+  iamworking:
+    sequence:
+      - service: switch.turn_on
+        entity_id: switch.laptop
+      - delay: 00:00:03
+      - service: switch.turn_on
+        entity_id: switch.desk_lamp
+      - service: switch.turn_off
+        entity_id: switch.sonoff_10007445d1
+     # - service: switch.turn_on
+      #  entity_id: switch.laptop_power
+      - service: media_player.alexa_tts
+        data_template:
+          entity_id: media_player.toan_s_echo_dot
+          message: " All your device have been opened. Working productivey and effectively, my boss"
+         
+  iamhome:
+    sequence:
+      - service: switch.turn_on
+        entity_id: switch.laptop
+      - delay: 00:00:03
+      - service: switch.turn_on
+        entity_id: switch.desk_lamp
+      - service: switch.turn_on
+        entity_id: switch.sonoff_10007445d1
+      - service: switch.turn_on
+        entity_id: switch.sonoff_100074e346
+      - service: media_player.alexa_tts
+        data_template:
+          entity_id: media_player.toan_s_echo_dot
+          message: " All your device have been opened. Welcome my boss to come back your smart home"
+
+  iamleaving:
+    sequence:
+      - service: switch.turn_off
+        entity_id: switch.laptop
+      - delay: 00:00:03
+      - service: switch.turn_off
+        entity_id: switch.desk_lamp
+      - service: switch.turn_off
+        entity_id: switch.sonoff_10007445d1
+      - service: switch.turn_off
+        entity_id: switch.sonoff_100074e346
+      - service: media_player.alexa_tts
+        data_template:
+          entity_id: media_player.toan_s_echo_dot
+          message: " All your device have been turned off . Thank you my boss ."
+     # - service: switch.turn_off
+      #  entity_id: switch.laptop_power
+  
+
+
+  play_music_link:
+    sequence:
+      - service: input_boolean.turn_off
+        entity_id: input_boolean.turn_off
+      - service: media_extractor.play_media
+        data_template: 
+          entity_id: >
+            {% if is_state("input_select.media_player","Alexa") %}  media_player.toan_s_echo_dot
+            {% elif is_state("input_select.media_player","Google Assistant") %} media_player.this_device
+            {% endif %}
+          media_content_id: "{{states('input_text.music')}}"  
+          media_content_type: audio/mp3
+          
+  play_zing_mp3:
+    sequence:
+      - service: zing_mp3.play
+        data_template:
+          entity_id: media_player.toan_s_echo_dot
+          music_type: >
+            {{ states.input_select.zing_mp3.state }} 
+          repeat: >
+            {{ states.input_boolean.zing_repeat.state }}          
+          shuffle: >
+            {{ states.input_boolean.zing_shuffle.state }}  
+            
+  boss_home:
+    sequence:
+      - service: switch.turn_on
+        entity_id: switch.laptop
+      - service: switch.turn_on
+        entity_id: switch.desk_lamp
+      - service: switch.turn_on
+        entity_id: switch.sonoff_10007445d1
+      - service: switch.turn_on
+        entity_id: switch.sonoff_100074e346
+     # - service: switch.turn_on
+      #  entity_id: switch.laptop_power
+      - service: media_player.alexa_tts
+        data_template:
+          entity_id: media_player.toan_s_echo_dot
+          message: "Welcome my boss to return your smart home. I am so glad to see you again"
+         
+  boss_not_home:
+    sequence:
+      - service: switch.turn_off
+        entity_id: switch.desk_lamp
+      - service: switch.turn_off
+        entity_id: switch.sonoff_10007445d1
+      - service: switch.turn_off
+        entity_id: switch.sonoff_100074e346
+     # - service: switch.turn_on
+      #  entity_id: switch.laptop_power
+      - service: media_player.alexa_tts
+        data_template:
+          entity_id: media_player.toan_s_echo_dot
+          message: "Goodbye my boss. Try your best"
+          
+                

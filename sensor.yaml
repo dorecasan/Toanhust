@@ -1,0 +1,65 @@
+# Weather prediction
+  - platform: yr
+  
+  
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+      - 'date_time'
+      - 'time_date'
+      - 'time_utc'
+      - 'beat'
+      
+      
+  - platform: dht
+    sensor: DHT11
+    pin: 4
+    temperature_offet: -1
+    humidity_offset: -5.2
+    monitored_conditions:
+      - temperature
+      - humidity      
+      
+      
+  - platform: worldclock
+    time_zone: Asia/Ho_Chi_Minh
+    
+    
+  - platform: template
+    sensors:
+      ngay_thang:
+        friendly_name: 'Ngày'
+        value_template: >
+          {% set weekdays = ["Chủ Nhật", "Thứ Hai","Thứ Ba","Thứ Tư","Thứ Năm","Thứ Sáu","Thứ Bảy"] %}
+          {% set day = weekdays[now().strftime('%w')|int] %}
+          {{ day + ', ngày ' + now().strftime('%d') + '/' + now().strftime('%m') + '/'+ now().strftime('%Y') }}
+      thoigian:
+        friendly_name: 'Giờ'
+        value_template: >
+          {% if now().strftime('%p') == 'AM' %}
+          {{ now().strftime('%I:%M') + ' Sáng' }}
+          {% else %}
+          {{ now().strftime('%I:%M') + ' Chiều' }}
+          
+          
+          {% endif %}
+  - platform: template
+    sensors:
+      alarm_weekday_time:
+          friendly_name: 'Alarm Time Weekdays'
+          value_template: >-
+              {{ "%0.02d:%0.02d" | format(states("input_number.alarm_hour") | int, states("input_number.alarm_minutes") | int) }}
+      alarm_weekend_time:
+          friendly_name: 'Alarm Time Weekend'
+          value_template: >-
+              {{ "%0.02d:%0.02d" | format(states("input_number.alarm_hour") | int, states("input_number.alarm_minutes") | int) }}
+      time_managment:
+          friendly_name: 'Time Managment'
+          value_template: >-
+              {{ "%0.02d:%0.02d" | format(states("input_number.time_hour") | int, states("input_number.time_minute") | int) }}
+              
+              
+
+  #- platform: lich_am
+    

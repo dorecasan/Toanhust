@@ -1,0 +1,82 @@
+hass_theme:
+  name: HASS THEMES
+  options:
+    - 'default'
+    - 'solarized'
+    - 'monolight'
+    - 'slate'
+  icon: 'mdi:theme-light-dark'
+  
+open_web:
+  name: Web link
+  options: 
+    - None
+    - Youtube
+    - Facebook
+  initial: None
+  icon: 'mdi:weather-rainy'
+
+music:
+  name: Select Music
+  options: 
+    - Nhạc Vpop
+    - Nhạc Pop
+    - Nhạc Studying
+    - Nhạc Sleeping
+    - Nhạc EDM
+  icon: mdi:music
+
+media_player:
+  name: Speaker
+  options:
+    - Alexa
+    - Google Assistant    
+  icon: mdi:speaker-wireless
+    
+zing_mp3:
+  name: Music type
+  options:
+    - Pop
+    - Country
+    - Rock
+    - Dance
+    - R&B
+    - Rap
+    - Soundtrack
+    - Nhac tre
+    - Tru tinh
+    - Que huong
+    - Cach mang
+    - Rock Viet
+    - Rap Viet
+    - Dance Viet
+  initial: Pop
+  icon: mdi:format-list-checkbox
+boss_state:
+  name: Boss Toan
+  options:
+    - Home
+    - Not Home
+  icon: mdi:cellphone-android
+  
+time_managment:
+  name: Time Managment
+  options:
+    - Desk Lamp
+    - Fan
+    - Fan Remote
+    - Main Light
+    - Home Light
+  icon: mdi:clock-alert-outline
+
+time_managment_2:
+  name: Time Managment Option 2
+  options:
+    - Desk Lamp
+    - Fan
+    - Fan Remote
+    - Main Light
+    - Home Light
+    - Nothing
+  initial: Nothing
+  icon: mdi:clock-start

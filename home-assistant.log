@@ -1,0 +1,1161 @@
+2019-04-05 19:34:54 WARNING (MainThread) [homeassistant.loader] You are using a custom component for sonoff which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-04-05 19:34:54 WARNING (MainThread) [homeassistant.loader] You are using a custom component for browser which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-04-05 19:34:54 WARNING (MainThread) [homeassistant.loader] You are using a custom component for zing_mp3 which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-04-05 19:34:54 WARNING (MainThread) [homeassistant.loader] You are using a custom component for alexa_media which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-04-05 19:34:54 WARNING (MainThread) [homeassistant.components.http] Configuring api_password via the http component has been deprecated. Use the legacy api password auth provider instead. For instructions, see https://www.home-assistant.io/docs/authentication/providers/#legacy-api-password
+2019-04-05 19:34:54 WARNING (MainThread) [homeassistant.components.http.auth] legacy_api_password support has been enabled.
+2019-04-05 19:34:59 WARNING (MainThread) [homeassistant.helpers.config_validation] Your configuration contains extra keys that the platform does not support.
+Please remove [temperature_offet].  (See /config/sensor.yaml, line 14). 
+2019-04-05 19:35:04 WARNING (MainThread) [homeassistant.components.sensor.template] Template sensor ngay_thang has no entity ids configured to track nor were we able to extract the entities to track from the value template(s). This entity will only be able to be updated manually.
+2019-04-05 19:35:05 WARNING (MainThread) [homeassistant.components.sensor.template] Template sensor thoigian has no entity ids configured to track nor were we able to extract the entities to track from the value template(s). This entity will only be able to be updated manually.
+2019-04-05 19:35:10 ERROR (MainThread) [homeassistant.loader] Error loading custom_components.sonoff.sensor. Make sure all dependencies are installed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/homeassistant/loader.py", line 166, in _load_file
+    module = importlib.import_module(path)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 962, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'custom_components.sonoff.sensor'; 'custom_components.sonoff' is not a package
+2019-04-05 19:35:10 WARNING (MainThread) [homeassistant.loader] You are using a custom component for sensor.sonoff which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-04-05 19:35:10 WARNING (MainThread) [homeassistant.loader] Integrations need to be in their own folder. Change sensor/sonoff.py to sonoff/sensor.py. This will stop working soon.
+2019-04-05 19:35:11 WARNING (MainThread) [homeassistant.loader] You are using a custom component for alexa_media.media_player which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-04-05 19:35:17 WARNING (MainThread) [homeassistant.components.switch] Setup of platform broadlink is taking over 10 seconds.
+2019-04-05 19:35:18 ERROR (SyncWorker_8) [homeassistant.components.switch.broadlink] Failed to connect to device
+2019-04-05 19:35:18 ERROR (MainThread) [homeassistant.loader] Error loading custom_components.sonoff.switch. Make sure all dependencies are installed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/homeassistant/loader.py", line 166, in _load_file
+    module = importlib.import_module(path)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 962, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'custom_components.sonoff.switch'; 'custom_components.sonoff' is not a package
+2019-04-05 19:35:18 WARNING (MainThread) [homeassistant.loader] You are using a custom component for switch.sonoff which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-04-05 19:35:18 WARNING (MainThread) [homeassistant.loader] Integrations need to be in their own folder. Change switch/sonoff.py to sonoff/switch.py. This will stop working soon.
+2019-04-05 19:35:19 ERROR (MainThread) [homeassistant.core] Error doing job: Exception in callback <function EventBus.async_listen_once.<locals>.onetime_listener at 0x6fc11540>
+Traceback (most recent call last):
+  File "uvloop/cbhandles.pyx", line 64, in uvloop.loop.Handle._run
+  File "/usr/local/lib/python3.7/site-packages/homeassistant/core.py", line 631, in onetime_listener
+    self._hass.async_run_job(listener, event)
+  File "/usr/local/lib/python3.7/site-packages/homeassistant/core.py", line 333, in async_run_job
+    target(*args)
+  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/person/__init__.py", line 353, in person_start_hass
+    self.person_updated()
+  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/person/__init__.py", line 374, in person_updated
+    self._update_state()
+  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/person/__init__.py", line 385, in _update_state
+    for entity_id in self._config.get(CONF_DEVICE_TRACKERS, []):
+TypeError: 'NoneType' object is not iterable
+2019-04-05 19:35:24 ERROR (MainThread) [homeassistant.loader] Error loading custom_components.sonoff.switch. Make sure all dependencies are installed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/homeassistant/loader.py", line 166, in _load_file
+    module = importlib.import_module(path)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 962, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'custom_components.sonoff.switch'; 'custom_components.sonoff' is not a package
+2019-04-05 19:35:24 WARNING (MainThread) [homeassistant.loader] Integrations need to be in their own folder. Change switch/sonoff.py to sonoff/switch.py. This will stop working soon.
+2019-04-05 19:35:25 ERROR (MainThread) [homeassistant.loader] Error loading custom_components.sonoff.sensor. Make sure all dependencies are installed
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/homeassistant/loader.py", line 166, in _load_file
+    module = importlib.import_module(path)
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 962, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'custom_components.sonoff.sensor'; 'custom_components.sonoff' is not a package
+2019-04-05 19:35:25 WARNING (MainThread) [homeassistant.loader] Integrations need to be in their own folder. Change sensor/sonoff.py to sonoff/sensor.py. This will stop working soon.
+2019-04-05 19:35:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:35:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:35:35 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:35:37 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:35:41 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:35:44 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:35:48 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:35:52 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:35:56 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:36:00 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:36:04 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:36:05 ERROR (SyncWorker_9) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:36:14 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:36:18 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:36:19 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:36:22 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:36:26 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:36:30 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:36:34 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:36:38 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:36:42 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:36:46 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:36:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:36:50 ERROR (SyncWorker_10) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:36:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:37:02 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:37:04 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:37:05 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:37:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:37:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:37:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:37:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:37:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:37:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:37:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:37:34 ERROR (SyncWorker_14) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:37:42 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:37:46 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:37:47 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:37:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:37:54 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:37:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:38:02 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:38:05 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:38:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:38:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:38:16 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:38:17 ERROR (SyncWorker_17) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:38:24 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:38:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:38:30 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:38:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:38:37 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:38:41 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:38:45 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:38:49 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:38:53 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:38:57 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:39:00 ERROR (SyncWorker_1) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:39:05 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:39:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:39:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:39:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:39:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:39:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:39:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:39:28 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:39:32 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:39:34 ERROR (SyncWorker_13) [homeassistant.util.yaml] while parsing a block collection
+  in "/config/ui-lovelace.yaml", line 7, column 6
+expected <block end>, but found '<block sequence start>'
+  in "/config/ui-lovelace.yaml", line 52, column 7
+2019-04-05 19:39:36 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:39:40 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:39:41 ERROR (SyncWorker_11) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:39:48 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:39:52 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:39:53 ERROR (SyncWorker_8) [homeassistant.util.yaml] while parsing a block mapping
+  in "/config/ui-lovelace.yaml", line 4, column 4
+expected <block end>, but found '<block sequence start>'
+  in "/config/ui-lovelace.yaml", line 52, column 5
+2019-04-05 19:39:54 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:39:56 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:40:00 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:40:03 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:40:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:40:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:40:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:40:20 ERROR (MainThread) [frontend.js.es5.201903210] https://192.168.16.100:8123/local/card-tools.js:68:18 Uncaught TypeError: Cannot read property 'querySelector' of null
+2019-04-05 19:40:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:40:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:40:25 ERROR (SyncWorker_12) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:40:27 ERROR (MainThread) [frontend.js.es5.201903210] https://192.168.16.100:8123/local/card-tools.js:68:18 Uncaught TypeError: Cannot read property 'querySelector' of null
+2019-04-05 19:40:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:40:36 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:40:39 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:40:40 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:40:44 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:40:48 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:40:52 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:40:56 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:41:00 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:41:04 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:41:08 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:41:09 ERROR (SyncWorker_19) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:41:12 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:41:20 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:41:24 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:41:26 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:41:28 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:41:32 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:41:36 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:41:40 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:41:44 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:41:47 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:41:51 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:41:55 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:41:57 ERROR (SyncWorker_4) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:42:03 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:42:07 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:42:09 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:42:11 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:42:15 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:42:19 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:42:22 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:42:26 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:42:30 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:42:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:42:37 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:42:39 ERROR (SyncWorker_5) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:42:45 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:42:49 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:42:52 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:42:52 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:42:56 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:43:00 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:43:04 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:43:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:43:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:43:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:43:21 ERROR (SyncWorker_3) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:43:22 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:43:30 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:43:34 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:43:36 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:43:38 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:43:42 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:43:46 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:43:49 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:43:53 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:43:56 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:44:00 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:44:04 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:44:07 ERROR (SyncWorker_9) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:44:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:44:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:44:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:44:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:44:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:44:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:44:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:44:38 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:44:42 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:44:46 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:44:49 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:44:53 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:44:53 ERROR (SyncWorker_14) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:45:00 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:45:04 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:45:07 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:45:08 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:45:11 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:45:15 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:45:19 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:45:23 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:45:27 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:45:31 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:45:35 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:45:37 ERROR (SyncWorker_12) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:45:44 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:45:48 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:45:50 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:45:52 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:45:56 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:46:00 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:46:04 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:46:08 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:46:12 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:46:16 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:46:20 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:46:21 ERROR (SyncWorker_13) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:46:28 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:46:32 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:46:34 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:46:36 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:46:39 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:46:43 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:46:47 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:46:51 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:46:55 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:46:59 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:47:03 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:47:04 ERROR (SyncWorker_3) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:47:11 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:47:15 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:47:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:47:19 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:47:23 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:47:27 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:47:40 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:47:44 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:47:48 ERROR (SyncWorker_11) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:47:49 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:47:57 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:48:01 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:48:03 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:48:06 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:48:10 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:48:14 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:48:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:48:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:48:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:48:28 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:48:32 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:48:33 ERROR (SyncWorker_6) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:48:39 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:48:43 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:48:46 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:48:46 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:48:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:48:53 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:48:57 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:49:01 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:49:04 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:49:08 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:49:12 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:49:15 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:49:16 ERROR (SyncWorker_10) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:49:22 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:49:26 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:49:29 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:49:30 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:49:34 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:49:38 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:49:41 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:49:45 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:49:49 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:49:53 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:49:57 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:49:59 ERROR (SyncWorker_11) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:50:05 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:50:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:50:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:50:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:50:16 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:50:20 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:50:24 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:50:28 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:50:32 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:50:36 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:50:40 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:50:41 ERROR (SyncWorker_2) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:50:48 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:50:52 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:50:54 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:50:56 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:50:58 WARNING (MainThread) [homeassistant.helpers.entity] Update of weather.toan_sky is taking over 10 seconds
+2019-04-05 19:51:00 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:51:04 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:51:08 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:51:12 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:51:16 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:51:20 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:51:24 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:51:24 ERROR (SyncWorker_15) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:51:24 ERROR (SyncWorker_5) [alexapy.alexaapi] An error occured accessing AlexaAPI: An exception of type ConnectionError occurred. Arguments:
+(ProtocolError('Connection aborted.', OSError("(104, 'ECONNRESET')")),)
+2019-04-05 19:51:30 ERROR (MainThread) [homeassistant.core] Error doing job: Future exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/config/custom_components/alexa_media/__init__.py", line 222, in <lambda>
+    track_time_interval(hass, lambda now: update_devices(), scan_interval)
+  File "/usr/local/lib/python3.7/site-packages/homeassistant/util/__init__.py", line 224, in wrapper
+    result = method(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/homeassistant/util/__init__.py", line 224, in wrapper
+    result = method(*args, **kwargs)
+  File "/config/custom_components/alexa_media/__init__.py", line 243, in update_devices
+    len(devices),
+TypeError: object of type 'NoneType' has no len()
+2019-04-05 19:51:34 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:51:38 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:51:40 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:51:42 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:51:46 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:51:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:51:53 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:51:57 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:52:01 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:52:05 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:52:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:52:11 ERROR (SyncWorker_12) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:52:16 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:52:20 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:52:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:52:24 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:52:28 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:52:32 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:52:36 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:52:41 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:52:44 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:52:47 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:52:51 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:52:53 ERROR (SyncWorker_15) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:52:59 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:53:03 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:53:05 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:53:07 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:53:12 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:53:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:53:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:53:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:53:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:53:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:53:35 ERROR (SyncWorker_16) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:53:40 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:53:44 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:53:47 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:53:48 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:53:53 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:53:57 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:54:01 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:54:05 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:54:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:54:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:54:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:54:17 ERROR (SyncWorker_9) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:54:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:54:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:54:31 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:54:32 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:54:36 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:54:39 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:54:43 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:54:47 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:54:51 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:54:55 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:54:59 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:55:02 ERROR (SyncWorker_2) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:55:07 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:55:10 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:55:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:55:14 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:55:18 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:55:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:55:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:55:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:55:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:55:37 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:55:41 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:55:43 ERROR (SyncWorker_5) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:55:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:55:54 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:55:58 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:55:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:56:02 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:56:06 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:56:10 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:56:15 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:56:18 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:56:22 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:56:26 ERROR (SyncWorker_14) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:56:26 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:56:34 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:56:38 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:56:40 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:56:42 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:56:46 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:56:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:56:54 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:56:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:57:04 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:57:08 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:57:10 ERROR (SyncWorker_10) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:57:16 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:57:20 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:57:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:57:24 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:57:28 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:57:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:57:37 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:57:41 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:57:45 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:57:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:57:52 ERROR (SyncWorker_11) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:57:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:58:02 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:58:04 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:58:05 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:58:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:58:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:58:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:58:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:58:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:58:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:58:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:58:34 ERROR (SyncWorker_12) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:58:42 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:58:46 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:58:48 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:58:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:58:54 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:58:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:59:02 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:59:06 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:59:10 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:59:14 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:59:18 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:59:18 ERROR (SyncWorker_6) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 19:59:26 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:59:31 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:59:32 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 19:59:35 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:59:39 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:59:43 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:59:47 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:59:51 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:59:55 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 19:59:59 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:00:02 ERROR (SyncWorker_12) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:00:07 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:00:11 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:00:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:00:15 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:00:19 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:00:24 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:00:28 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:00:32 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:00:37 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:00:42 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:00:43 ERROR (SyncWorker_9) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:00:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:00:54 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:00:56 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:00:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:01:02 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:01:06 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:01:11 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:01:15 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:01:19 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:01:23 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:01:26 ERROR (SyncWorker_6) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:01:31 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:01:35 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:01:37 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:01:39 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:01:43 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:01:47 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:01:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:01:54 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:01:57 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:02:01 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:02:05 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:02:07 ERROR (SyncWorker_14) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:02:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:02:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:02:19 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:02:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:02:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:02:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:02:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:02:37 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:02:41 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:02:45 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:02:49 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:02:49 ERROR (SyncWorker_5) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:02:56 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:03:00 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:03:02 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:03:03 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:03:07 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:03:11 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:03:15 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:03:19 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:03:23 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:03:27 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:03:31 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:03:32 ERROR (SyncWorker_19) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:03:39 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:03:43 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:03:45 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:03:47 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:03:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:03:54 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:03:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:04:02 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:04:06 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:04:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:04:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:04:15 ERROR (SyncWorker_7) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:04:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:04:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:04:27 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:04:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:04:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:04:37 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:04:41 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:04:45 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:04:49 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:04:53 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:04:57 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:04:57 ERROR (SyncWorker_5) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:05:06 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:05:10 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:05:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:05:14 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:05:18 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:05:22 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:05:26 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:05:30 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:05:34 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:05:38 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:05:42 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:05:42 ERROR (SyncWorker_11) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:05:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:05:54 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:05:56 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:05:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:06:02 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:06:06 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:06:10 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:06:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:06:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:06:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:06:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:06:26 ERROR (SyncWorker_15) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:06:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:06:36 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:06:39 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:06:40 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:06:44 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:06:48 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:06:52 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:06:56 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:06:59 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:07:03 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:07:07 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:07:09 ERROR (SyncWorker_14) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:07:15 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:07:19 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:07:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:07:23 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:07:27 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:07:31 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:07:35 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:07:40 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:07:44 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:07:48 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:07:51 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:07:51 ERROR (SyncWorker_6) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:07:57 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:08:02 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:08:04 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:08:06 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:08:10 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:08:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:08:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:08:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:08:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:08:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:08:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:08:34 ERROR (SyncWorker_15) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:08:42 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:08:46 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:08:49 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:08:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:08:54 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:08:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:09:02 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:09:06 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:09:10 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:09:14 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:09:19 ERROR (SyncWorker_17) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:09:19 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:09:27 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:09:31 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:09:33 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:09:35 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:09:39 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:09:42 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:09:46 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:09:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:09:54 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:09:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:10:02 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:10:03 ERROR (SyncWorker_3) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:10:10 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:10:14 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:10:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:10:18 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:10:22 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:10:26 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:10:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:10:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:10:37 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:10:41 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:10:45 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:10:47 ERROR (SyncWorker_13) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:10:48 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:10:55 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:10:59 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:11:02 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:11:03 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:11:06 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:11:10 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:11:14 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:11:18 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:11:22 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:11:26 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:11:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:11:32 ERROR (SyncWorker_5) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:11:37 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:11:41 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:11:43 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:11:45 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:11:49 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:11:53 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:11:57 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:12:00 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:12:04 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:12:08 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:12:12 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:12:13 ERROR (SyncWorker_2) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:12:19 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:12:24 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:12:26 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:12:28 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:12:32 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:12:35 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:12:39 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:12:43 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:12:47 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:12:51 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:12:55 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:12:56 ERROR (SyncWorker_4) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:13:03 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:13:07 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:13:09 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:13:11 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:13:15 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:13:19 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:13:24 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:13:28 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:13:32 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:13:35 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:13:39 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:13:39 ERROR (SyncWorker_1) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:13:47 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:13:51 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:13:53 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:13:55 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:14:00 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:14:04 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:14:08 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:14:12 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:14:16 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:14:20 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:14:23 ERROR (SyncWorker_9) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:14:28 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:14:32 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:14:34 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:14:36 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:14:40 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:14:44 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:14:47 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:14:51 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:14:55 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:14:59 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:15:03 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:15:04 ERROR (SyncWorker_15) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:15:11 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:15:15 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:15:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:15:19 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:15:23 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:15:27 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:15:31 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:15:35 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:15:39 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:15:43 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:15:47 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:15:47 ERROR (SyncWorker_12) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:15:55 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:15:59 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:16:01 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:16:04 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:16:08 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:16:12 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:16:16 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:16:20 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:16:24 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:16:28 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:16:31 ERROR (SyncWorker_13) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:16:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:16:41 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:16:45 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:16:47 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:16:49 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:16:53 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:16:57 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:17:01 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:17:05 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:17:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:17:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:17:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:17:17 ERROR (SyncWorker_18) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:17:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:17:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:17:32 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:17:32 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:17:36 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:17:40 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:17:43 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:17:47 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:17:51 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:17:54 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:17:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:18:01 ERROR (SyncWorker_13) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:18:05 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:18:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:18:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:18:12 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:18:15 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:18:19 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:18:23 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:18:27 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:18:31 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:18:35 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:18:39 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:18:42 ERROR (SyncWorker_16) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:18:46 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:18:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:18:53 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:18:54 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:18:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:19:02 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:19:06 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:19:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:19:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:19:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:19:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:19:23 ERROR (SyncWorker_1) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:19:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:19:35 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:19:35 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:19:38 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:19:42 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:19:46 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:19:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:19:54 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:19:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:20:03 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:20:05 ERROR (SyncWorker_3) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:20:11 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:20:15 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:20:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:20:19 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:20:23 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:20:27 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:20:32 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:20:36 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:20:40 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:20:43 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:20:47 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:20:47 ERROR (SyncWorker_6) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:20:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:21:01 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:21:02 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:21:06 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:21:10 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:21:14 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:21:19 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:21:23 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:21:26 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:21:30 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:21:31 ERROR (SyncWorker_12) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:21:38 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:21:42 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:21:44 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:21:46 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:21:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:21:54 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:21:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:22:02 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:22:08 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:22:11 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:22:14 ERROR (SyncWorker_6) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:22:19 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:22:23 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:22:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:22:27 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:22:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:22:37 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:22:41 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:22:45 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:22:49 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:22:53 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:22:55 ERROR (SyncWorker_8) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:23:01 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:23:05 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:23:07 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:23:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:23:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:23:18 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:23:22 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:23:26 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:23:30 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:23:34 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:23:37 ERROR (SyncWorker_18) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:23:41 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:23:45 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:23:48 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:23:49 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:23:53 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:23:57 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:24:01 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:24:04 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:24:08 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:24:12 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:24:18 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:24:18 ERROR (SyncWorker_5) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:24:26 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:24:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:24:32 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:24:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:24:37 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:24:42 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:24:46 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:24:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:24:54 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:24:59 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:25:02 ERROR (SyncWorker_7) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:25:07 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:25:11 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:25:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:25:14 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:25:18 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:25:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:25:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:25:28 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:25:32 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:25:36 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:25:40 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:25:43 ERROR (SyncWorker_6) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:25:46 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:25:54 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:25:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:26:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:26:03 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:26:07 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:26:11 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:26:15 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:26:20 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:26:24 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:26:28 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:26:30 ERROR (SyncWorker_16) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:26:32 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:26:40 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:26:44 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:26:46 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:26:51 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:26:55 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:26:59 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:27:03 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:27:06 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:27:10 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:27:14 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:27:16 ERROR (SyncWorker_8) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:27:22 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:27:26 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:27:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:27:32 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:27:36 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:27:40 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:27:44 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:27:48 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:27:52 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:27:56 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:27:58 ERROR (SyncWorker_7) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:28:05 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:28:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:28:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:28:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:28:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:28:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:28:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:28:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:28:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:28:37 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:28:41 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:28:41 ERROR (SyncWorker_12) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:28:48 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:28:52 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:28:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:28:56 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:29:00 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:29:04 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:29:08 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:29:12 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:29:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:29:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:29:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:29:25 ERROR (SyncWorker_11) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:29:32 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:29:36 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:29:38 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:29:39 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:29:43 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:29:46 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:29:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:29:54 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:29:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:30:02 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:30:06 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:30:08 ERROR (SyncWorker_3) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:30:15 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:30:19 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:30:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:30:22 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:30:26 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:30:30 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:30:35 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:30:39 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:30:43 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:30:46 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:30:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:30:51 ERROR (SyncWorker_7) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:30:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:31:01 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:31:04 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:31:05 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:31:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:31:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:31:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:31:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:31:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:31:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:31:32 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:31:34 ERROR (SyncWorker_5) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:31:40 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:31:45 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:31:46 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:31:49 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:31:53 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:31:57 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:32:01 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:32:05 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:32:08 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:32:12 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:32:16 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:32:16 ERROR (SyncWorker_18) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:32:24 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:32:28 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:32:31 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:32:31 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:32:35 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:32:39 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:32:43 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:32:47 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:32:51 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:32:56 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:33:00 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:33:00 ERROR (SyncWorker_8) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:33:07 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:33:08 WARNING (MainThread) [homeassistant.helpers.entity] Updating state for weather.toan_sky (<class 'homeassistant.components.weather.darksky.DarkSkyWeather'>) took 0.534 seconds. Please report platform to the developers at https://goo.gl/Nvioub
+2019-04-05 20:33:11 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:33:14 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:33:15 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:33:19 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:33:23 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:33:27 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:33:31 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:33:35 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:33:39 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:33:43 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:33:44 ERROR (SyncWorker_18) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:33:51 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:33:56 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:33:57 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:34:00 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:34:08 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:34:11 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:34:15 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:34:19 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:34:23 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:34:27 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:34:27 ERROR (SyncWorker_6) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:34:35 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:34:39 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:34:41 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:34:43 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:34:47 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:34:51 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:34:55 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:34:59 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:35:06 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:35:07 ERROR (MainThread) [homeassistant.components.updater] Got unexpected response: None
+2019-04-05 20:35:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:35:10 ERROR (SyncWorker_1) [alexapy.alexaapi] An error occured accessing AlexaAPI: An exception of type ConnectionError occurred. Arguments:
+(ProtocolError('Connection aborted.', OSError("(104, 'ECONNRESET')")),)
+2019-04-05 20:35:11 ERROR (SyncWorker_16) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:35:12 ERROR (MainThread) [homeassistant.core] Error doing job: Future exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/config/custom_components/alexa_media/__init__.py", line 222, in <lambda>
+    track_time_interval(hass, lambda now: update_devices(), scan_interval)
+  File "/usr/local/lib/python3.7/site-packages/homeassistant/util/__init__.py", line 224, in wrapper
+    result = method(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/homeassistant/util/__init__.py", line 224, in wrapper
+    result = method(*args, **kwargs)
+  File "/config/custom_components/alexa_media/__init__.py", line 243, in update_devices
+    len(devices),
+TypeError: object of type 'NoneType' has no len()
+2019-04-05 20:35:16 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:35:20 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:35:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:35:24 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:35:28 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:35:34 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:35:40 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:35:43 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:35:47 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:35:52 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:35:53 ERROR (SyncWorker_2) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:36:01 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:36:05 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:36:07 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:36:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:36:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:36:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:36:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:36:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:36:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:36:32 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:36:36 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:36:37 ERROR (SyncWorker_3) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:36:39 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:36:47 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:36:50 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:36:53 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:36:54 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:36:58 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:37:01 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:37:05 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:37:09 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:37:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:37:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:37:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:37:23 ERROR (SyncWorker_12) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:37:30 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:37:34 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:37:39 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:37:39 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:37:43 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:37:48 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:37:52 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:37:56 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:38:00 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:38:05 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:38:06 ERROR (SyncWorker_10) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:38:13 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:38:17 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:38:19 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:38:21 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:38:25 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:38:29 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:38:33 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:38:37 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:38:41 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:38:45 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:38:49 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:38:49 ERROR (SyncWorker_6) [homeassistant.components.switch.broadlink] Timeout during authorization
+2019-04-05 20:38:59 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:39:04 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.virtual_desk_lamp is taking over 10 seconds
+2019-04-05 20:39:04 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:39:08 WARNING (MainThread) [homeassistant.components.switch] Updating broadlink switch took longer than the scheduled update interval 0:00:03
+2019-04-05 20:39:33 ERROR (SyncWorker_9) [homeassistant.components.switch.broadlink] Timeout during authorization
